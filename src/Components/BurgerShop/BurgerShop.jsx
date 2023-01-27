@@ -18,7 +18,7 @@ const handleAddIngredient = (evt) =>{
         <button>Clear Order</button>
       </nav>
       <section>
-        <IngredientList buttons={true} handleAddIngredient={handleAddIngredient} ingredients={ingredients}/>
+        <IngredientList buttons={true} isList={true} handleAddIngredient={handleAddIngredient} ingredients={ingredients}/>
         <BurgerStack name="order"  ingredients={stack}/>
       </section>
     </div>
