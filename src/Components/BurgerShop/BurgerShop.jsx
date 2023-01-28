@@ -9,7 +9,10 @@ const BurgerShop = () => {
 const addToBurger = (ingredient) =>{
   setStack([...stack, ingredient])
 }
-
+const removeFromBurger = (target) => {
+  let newStack= stack.filter(ingredient => ingredient.name !== target.name)
+  setStack(newStack)
+}
   return (
     <div className="burger-shop">
       <nav>
@@ -18,7 +21,7 @@ const addToBurger = (ingredient) =>{
       </nav>
       <section>
         <IngredientList buttons={true} isList={true} addToBurger={addToBurger} ingredients={ingredients}/>
-        <BurgerStack name="order"  ingredients={stack}/>
+        <BurgerStack name="order" removeFromBurger={removeFromBurger} ingredients={stack}/>
       </section>
     </div>
   )

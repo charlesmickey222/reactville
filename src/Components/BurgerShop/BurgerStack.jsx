@@ -8,7 +8,7 @@ const BurgerStack = (props) => {
           props.ingredients.map(ingredient => 
           <>
             <li>
-              <Ingredient key={ingredient.id} ingredient={ingredient}/>
+              <Ingredient key={ingredient.id} removeFromBurger={props.removeFromBurger} ingredient={ingredient}/>
             </li>
           </>
         )
