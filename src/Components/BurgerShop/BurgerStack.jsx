@@ -1,4 +1,3 @@
-import { ingredients } from "../../data/burger-data"
 import Ingredient from "./Ingredient"
 
 
@@ -8,7 +7,7 @@ const BurgerStack = (props) => {
       {props.ingredients.length ?
           props.ingredients.map(ingredient => 
           <>
-            <li >
+            <li>
               <Ingredient key={ingredient.id} ingredient={ingredient}/>
             </li>
           </>

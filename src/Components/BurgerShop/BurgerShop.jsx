@@ -6,9 +6,8 @@ import { useState } from 'react'
 
 const BurgerShop = () => {
   const [stack, setStack] = useState([])
-const handleAddIngredient = (evt) =>{
-  evt.preventDefault()
-  setStack(...stack, evt.target.value)
+const addToBurger = (ingredient) =>{
+  setStack([...stack, ingredient])
 }
 
   return (
@@ -18,7 +17,7 @@ const handleAddIngredient = (evt) =>{
         <button>Clear Order</button>
       </nav>
       <section>
-        <IngredientList buttons={true} isList={true} handleAddIngredient={handleAddIngredient} ingredients={ingredients}/>
+        <IngredientList buttons={true} isList={true} addToBurger={addToBurger} ingredients={ingredients}/>
         <BurgerStack name="order"  ingredients={stack}/>
       </section>
     </div>
